@@ -32,7 +32,7 @@ export default defineConfig({
       SCHEDULES_1: envField.string({ context: "client", access: "public", optional: true }),
       SCHEDULES_2: envField.string({ context: "client", access: "public", optional: true }),
       SCHEDULES_3: envField.string({ context: "client", access: "public", optional: true }),
-
+      MAP_CAMPING_IFRAME: envField.string({ context: "client", access: "public", optional: true }),
     }
   }
 });

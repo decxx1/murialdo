@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import Gallery from '@/components/Gallery.astro';
+import Map from '@/components/camping/Map.astro';
+import CampingInfo from '@/components/camping/CampingInfo.astro';
+import CTACamping from '@/components/camping/CTACamping.astro';
+
+const preloadImages = [
+	{
+		href:"/images/index/cancha-fultbol-murialdo.png",
+		as: "image",
+		type: "image/png",
+	}
+];
+---
+
+<Layout
+	title="Club Leonardo Murialdo - Camping"
+	canonical="https://clubleonardomurialdo.com.ar/camping"
+	metaTitle="Club Leonardo Murialdo - Camping"
+	metaDescription="Camping en el carrizal para disfrutar en familia. Ofrecemos parcelas amplias, actividades para todas las edades y un entorno natural seguro y relajante. Piscina, zonas de  parrillas"
+	metaImg="https://clubleonardomurialdo.com.ar/images/index/cancha-fultbol-murialdo.png"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Camping Carrizal" img="/images/camping/carrizal-hero.jpg" />
+	<CTACamping />
+	<CampingInfo />
+	<Map />
+	<Gallery />
+</Layout>

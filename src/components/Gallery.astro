@@ -1,0 +1,92 @@
+---
+import images from '@/data/images.json';
+---
+<section class="container mx-auto py-20">
+    <h2 class="text-white font-extrabold text-5xl text-center mb-16">Galería</h2>
+        <div class="grid-wrapperimg max-sm:px-4" id="galleryID">
+            {
+                images.map((image, index) => (
+                    <a class={image.class} data-pswp-src={image.src} data-pswp-width={image.width} data-pswp-height={image.height}>
+                        <img loading="lazy" class="img-grid-mosaic" src={image.thumb} alt={'camping carrizal '+ index} />
+                    </a>
+                ))
+            }
+        </div>
+</section>
+<script>
+    import PhotoSwipeLightbox from 'photoswipe/lightbox';
+    import 'photoswipe/style.css';
+    
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#galleryID',
+        children: 'a',
+        mouseMovePan: true,
+        showHideAnimationType: 'zoom',
+        initialZoomLevel: 'fit',
+        secondaryZoomLevel: 1.5,
+        maxZoomLevel: 1,
+    
+        imageClickAction: 'close',
+        tapAction: 'close',
+    
+        pswpModule: () => import('photoswipe')
+        
+    });
+    
+    lightbox.init();
+</script>
+<style>
+    /*Galería */
+
+.img-grid-mosaic {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* Main CSS */
+.grid-wrapperimg > div,.grid-wrapperimg > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grid-wrapperimg > div > img,.grid-wrapperimg > a > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+	margin-bottom: 12px;
+}
+.grid-wrapperimg > div > img:hover,.grid-wrapperimg > a > img:hover {
+	cursor: pointer;
+}
+@media (min-width: 500px) {
+	.grid-wrapperimg {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-auto-rows: 200px;
+		grid-auto-flow: dense;
+	}
+	.ludwig {
+		position: relative;
+		padding-left: 1em;
+		border-left: 0.2em solid var(--color-primary);
+		font-family: 'Times New Roman', serif;
+		font-size: 2.4em;
+		line-height: 1.5em;
+		font-weight: 100;
+	}
+}
+.grid-wrapperimg .wide {
+	grid-column: span 2;
+}
+.grid-wrapperimg .tall {
+	grid-row: span 2;
+}
+.grid-wrapperimg .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+</style>

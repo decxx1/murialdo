@@ -1,0 +1,93 @@
+[
+    {
+      "src": "/images/camping/gallery/1.jpg",
+      "thumb": "/images/camping/gallery/thumb/1.webp",
+      "class": "tall",
+      "width": "1920",
+      "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/2.jpg",
+        "thumb": "/images/camping/gallery/thumb/2.webp",
+        "class": "wide",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/3.jpg",
+        "thumb": "/images/camping/gallery/thumb/3.webp",
+        "class": "tall",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/4.jpg",
+        "thumb": "/images/camping/gallery/thumb/4.webp",
+        "class": "big",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/5.jpg",
+        "thumb": "/images/camping/gallery/thumb/5.webp",
+        "class": "tall",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/6.jpg",
+        "thumb": "/images/camping/gallery/thumb/6.webp",
+        "class": "",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/7.jpg",
+        "thumb": "/images/camping/gallery/thumb/7.webp",
+        "class": "big",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/8.jpg",
+        "thumb": "/images/camping/gallery/thumb/8.webp",
+        "class": "tall",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/9.jpg",
+        "thumb": "/images/camping/gallery/thumb/9.webp",
+        "class": "",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/10.jpg",
+        "thumb": "/images/camping/gallery/thumb/10.webp",
+        "class": "tall",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/11.jpg",
+        "thumb": "/images/camping/gallery/thumb/11.webp",
+        "class": "big",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/12.jpg",
+        "thumb": "/images/camping/gallery/thumb/12.webp",
+        "class": "",
+        "width": "1920",
+        "height": "1446"
+    },
+    {
+        "src": "/images/camping/gallery/13.jpg",
+        "thumb": "/images/camping/gallery/thumb/13.webp",
+        "class": "wide",
+        "width": "1920",
+        "height": "910"
+    }
+]
