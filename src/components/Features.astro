@@ -1,0 +1,38 @@
+---
+import Deportes from '@/assets/icons/deportes.svg';
+import Actividades from '@/assets/icons/actividades-recreativas.svg';
+import Piscina from '@/assets/icons/piscina.svg';
+---
+<section class="container mx-auto py-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 max-md:mx-4">
+        <article class="flex gap-4">
+            <div>
+                <Deportes width={64} height={64} />
+            </div>
+            <div class="text-white">
+                <h2 class="font-bold text-xl">Deportes</h2>
+                <p class="text-lg">Disciplinas deportivas de competencia, con partidos oficiales los fines de semana</p>
+            </div>
+        </article>
+
+        <article class="flex gap-4">
+            <div>
+                <Actividades width={64} height={64} />
+            </div>
+            <div class="text-white">
+                <h2 class="font-bold text-xl">Actividades recreativas</h2>
+                <p class="text-lg">Actividades como aerobic, aerobox, pilates, zumba, full body, yoga.</p>
+            </div>
+        </article>
+
+        <article class="flex gap-4">
+            <div>
+                <Piscina width={64} height={64} />
+            </div>
+            <div class="text-white">
+                <h2 class="font-bold text-xl">Verano</h2>
+                <p class="text-lg">Para vacacionar con la familia Camping en el carrizal y Escuela de verano, viví una experiencia única.</p>
+            </div>
+        </article>
+    </div>
+</section>

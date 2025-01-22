@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/components/Hero.astro';
+import Features from '@/components/Features.astro';
+import Sports from '@/components/Sports.astro';
+import CTASports from '@/components/CTASports.astro';
+import Activities from '@/components/Activities.astro';
+
+const preloadImages = [
+	{
+		href:"/images/index/cancha-fultbol-murialdo.png",
+		as: "image",
+		type: "image/png",
+	}
+];
+---
+
+<Layout
+	title="Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar"
+	metaTitle="Club Leonardo Murialdo"
+	metaDescription="Inscribite y formá parte de la familia Canaria, contamos con deportes de competencia, muchas actividades de recreación, piscinas y camping para el verano."
+	metaImg="https://clubleonardomurialdo.com.ar/images/index/cancha-fultbol-murialdo.png"
+	preLoad={preloadImages}
+>
+	<Hero />
+	<Features />
+	<Sports />
+	<CTASports />
+	<Activities />
+</Layout>

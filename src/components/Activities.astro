@@ -1,0 +1,69 @@
+---
+import Aerobic from '@/assets/icons/activities/aerobic.svg';
+import Aerobox from '@/assets/icons/activities/aerobox.svg';
+import Pilates from '@/assets/icons/activities/pilates.svg';
+import Yoga from '@/assets/icons/activities/yoga.svg';
+import Zumba from '@/assets/icons/activities/zumba.svg';
+import Bento from '@/components/Bento.astro'
+---
+<section class="container xl:max-w-screen-xl py-20 mx-auto">
+    <h2 class="text-white font-extrabold text-5xl text-center">Actividades Recreativas</h2>
+
+    <div class="grid auto-rows-[340px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-20 max-sm:mx-4">
+        <Bento href="/actividades/carrizal" className="relative sm:col-span-2">
+            <img loading="lazy" src="/images/index/camping-carrizal.jpg" alt="Camping Carrizal" class="object-cover w-full h-full rounded-3xl" />
+            <figcaption class="absolute top-6 left-6">
+                <h3 class="bg-light text-primary font-bold text-2xl py-2 px-4 rounded-2xl">Camping Carrizal</h3>
+            </figcaption>
+        </Bento>
+        <Bento href="/actividades/aerobic" className="md:col-span-1">
+            <article class="flex flex-col items-center justify-between h-full p-6">
+                <footer class="">
+                    <h3 class="text-primary font-bold text-3xl text-center">Aeróbic</h3>
+                </footer>
+                <Aerobic class="w-full h-auto -mb-4" />
+            </article>
+        </Bento>
+        <Bento href="/actividades/pilates" className="md:col-span-1">
+            <article class="flex flex-col items-center justify-between h-full p-6">
+                <footer class="">
+                    <h3 class="text-primary font-bold text-3xl text-center">Pilates</h3>
+                </footer>
+                <Pilates class="w-full h-auto -mb-4" />
+            </article>
+        </Bento>
+        <Bento href="/actividades/aerobox" className="md:col-span-1">
+            <article class="flex flex-col items-center justify-between h-full p-6">
+                <footer class="">
+                    <h3 class="text-primary font-bold text-3xl text-center">Aerobox</h3>
+                </footer>
+                <Aerobox class="w-full h-auto -mb-4" />
+            </article>
+        </Bento>
+        <Bento href="/actividades/zumba" className="md:col-span-1">
+            <article class="flex flex-col items-center justify-between h-full p-6">
+                <Zumba class="w-full h-auto -mt-4" />
+                <footer>
+                    <h3 class="text-primary font-bold text-3xl text-center">Zumba</h3>
+                </footer>
+            </article>
+        </Bento>
+        <Bento href="/actividades/yoga" className="md:col-span-1">
+            <article class="flex flex-col items-center justify-between h-full p-6">
+                <Yoga class="w-full h-auto -mt-4" />
+                <footer>
+                    <h3 class="text-primary font-bold text-3xl text-center">Yoga</h3>
+                </footer>
+            </article>
+        </Bento>
+        <Bento href="https://escueladeveranomurialdo.com.ar/" target="_blank" className="relative md:col-span-2">
+            <img loading="lazy" src="/images/index/escuela-de-verano.png" alt="Escuela de verano Murialdo" class="object-cover w-full h-full rounded-3xl" />
+            <figcaption class="absolute top-6 left-6">
+                <h3 class="bg-light text-primary font-bold text-2xl py-2 px-4 rounded-2xl">Escuela de verano</h3>
+            </figcaption>
+        </Bento>
+    </div>
+    <div class="flex justify-center">
+        <a href="/actividades" class="mt-16 bg-light text-primary text-2xl border-2 border-primary rounded-xl px-6 py-2 hover:font-bold hover:border-light hover:bg-primary hover:text-white">Ver todos</a>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+---
+import {
+    EMAIL,
+    PHONE,
+    PHONE_FORMAT,
+    INSTAGRAM,
+    FACEBOOK, 
+    WHATSAPP,
+    WHATSAPP_FORMAT,
+    ADDRESS,
+    SCHEDULES_1,
+    SCHEDULES_2,
+    SCHEDULES_3
+} from 'astro:env/client';
+import Facebook from '@/assets/icons/contact/facebook.svg';
+import Instagram from '@/assets/icons/contact/instagram.svg';
+import Whatsapp from '@/assets/icons/contact/Whatsapp.svg';
+import Phone from '@/assets/icons/contact/phone.svg';
+import Mapmarker from '@/assets/icons/contact/mapmarker.svg';
+import { MAP_URL } from 'astro:env/client';
+---
+<footer class="container xl:max-w-screen-xl mx-auto py-20">
+    <div class="grid grid-cols-12 gap-4 sm:gap-6 lg:gap-8 mx-4">
+        <article class="bg-light border-2 border-primary rounded-3xl px-4 py-4 col-span-12 md:col-span-4 lg:col-span-4 max-sm:max-h-80">
+            <div class="text-center text-primary flex flex-col items-center justify-between gap-4">
+                <h3 class="text-primary font-extrabold text-2xl md:text-xl lg:text-3xl">Club<br class="lg:max-xl:hidden"/> Leonardo Murialdo</h3>
+                <img loading="lazy" src="/images/logo/club-murialdo.png" alt="Logo Club Leonardo Murialdo" class="w-32 md:w-28 xl:w-32 h-auto" />
+                <p class="text-primary text-2xl md:text-xl lg:text-3xl">Fundado en 1942</p>
+            </div>
+        </article>
+        <div class="col-span-12 md:col-span-8 lg:col-span-6 flex flex-col gap-4 sm:gap-6 lg:gap-8">
+            <article class="bg-light border-2 border-primary rounded-3xl px-6 py-4">
+                <h3 class="text-primary font-extrabold text-xl md:text-lg lg:text-2xl mb-2 lg:mb-3">Horarios de atención:</h3> 
+                <ul>
+                    <li class="text-primary text-lg md:text-md lg:text-xl">{SCHEDULES_1}</li>
+                    <li class="text-primary text-lg md:text-md lg:text-xl">{SCHEDULES_2}</li>
+                    <li class="text-primary text-lg md:text-md lg:text-xl">{SCHEDULES_3}</li>
+                </ul>
+            </article>
+            <article class="bg-light border-2 border-primary rounded-3xl px-6 py-4">
+                <ul>
+                    <li class="text-primary text-lg md:text-md lg:text-xl mb-2 hover:text-secondary">
+                        <a href={`tel:${PHONE_FORMAT}`} target="_blank">
+                            <Phone class="mr-2 w-7 h-auto inline" />{PHONE}
+                        </a>
+                    </li>
+                    <li class="text-primary text-lg md:text-md lg:text-xl mb-2 hover:text-secondary">
+                        <a href={`https://wa.me/${WHATSAPP_FORMAT}`} target="_blank">
+                            <Whatsapp class="mr-2 w-7 h-auto inline" />{WHATSAPP}
+                        </a>
+                    </li>
+                    <li class="text-primary text-md md:text-sm lg:text-lg hover:text-secondary">
+                        <a href={MAP_URL} target="_blank">
+                            <Mapmarker class="mr-2 w-7 h-auto inline" />
+                            {ADDRESS}
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </div>
+        <div class="col-span-12 lg:col-span-2 max-lg:max-h-44 bg-light border-2 border-primary rounded-3xl px-4 py-4 flex flex-row lg:flex-col items-center justify-center gap-12">
+            <a href={FACEBOOK} target="_blank">
+                <Facebook class="w-16 lg:w-24 h-auto hover:drop-shadow hover:rotate-3" />
+            </a>
+            <a href={INSTAGRAM} target="_blank">
+                <Instagram class="w-16 lg:w-24 h-auto hover:drop-shadow hover:rotate-3" />
+            </a>
+        </div>
+    </div>
+    <p class="text-white text-center mt-16">
+        Diseñado por 
+        <a href="https://manejoweb.com.ar/" class="font-bold hover:text-secondary" target="_blank">Manejo Web</a>
+    </p>
+</footer>

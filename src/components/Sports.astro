@@ -1,0 +1,75 @@
+---
+import Basquet from '@/assets/icons/sports/basquet.svg';
+import Futbol from '@/assets/icons/sports/futbol.svg';
+import Tenis from '@/assets/icons/sports/tenis.svg';
+import Voley from '@/assets/icons/sports/voley.svg';
+import Atletismo from '@/assets/icons/sports/atletismo.svg';
+import Hockey from '@/assets/icons/sports/hockey.svg';
+import Bento from '@/components/Bento.astro'
+---
+<section class="container xl:max-w-screen-xl py-20 mx-auto">
+    <h2 class="text-white font-extrabold text-5xl text-center">Deportes</h2>
+
+    <div class="grid auto-rows-[340px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-20 max-sm:mx-4">
+        <Bento href="/deportes/basquet" className="md:col-span-1 md:row-span-2">
+            <article class="flex flex-col items-center md:items-start justify-between h-full p-6">
+                <Basquet class="w-full h-auto" />
+
+                <footer class="md:mb-10">
+                    <h3 class="text-primary font-bold text-3xl">Básquet</h3>
+                    <p class="text-primary text-2xl">Mixto hasta los 12 años</p>
+                </footer>
+            </article>
+        </Bento>
+        <Bento href="/deportes/hockey-cesped" className="md:col-span-2">
+            <article class="flex flex-col md:flex-row items-center md:items-start justify-between h-full w-full p-6">
+                <Hockey class="w-auto h-full"  />
+
+                <footer class="mr-3 max-w-xs">
+                    <h3 class="text-primary font-bold text-3xl">Hockey sobre césped</h3>
+                    <p class="text-primary text-2xl">Rama femenina, masculina y mamys hockey</p>
+                </footer>
+            </article>
+        </Bento>
+        <Bento href="/deportes/voley" className="md:col-span-1">
+            <article class="flex flex-col items-center justify-between h-full p-6">
+                <footer class="">
+                    <h3 class="text-primary font-bold text-3xl text-center">Vóley</h3>
+                    <p class="text-primary text-2xl">Rama femenina</p>
+                </footer>
+                <Voley class="w-full h-auto -mb-4" />
+            </article>
+        </Bento>
+        <Bento href="/deportes/tenis" className="md:col-span-1">
+            <article class="flex flex-col items-center justify-between h-full p-6">
+                <Tenis class="w-full h-auto -mt-4" />
+                <footer>
+                    <h3 class="text-primary font-bold text-3xl text-center">Tenis</h3>
+                    <p class="text-primary text-2xl text-center">Mixto</p>
+                </footer>
+            </article>
+        </Bento>
+        <Bento href="/deportes/atletismo" className="md:col-span-2">
+            <article class="flex flex-col md:flex-row items-center md:items-start justify-between h-full w-full p-6">
+                <Atletismo class="w-auto h-full"  />
+
+                <footer class="mr-3 max-w-xs">
+                    <h3 class="text-primary font-bold text-3xl">Atletismo</h3>
+                    <p class="text-primary text-2xl">Rama femenina y masculina</p>
+                </footer>
+            </article>
+        </Bento>
+        <Bento href="/deportes/futbol" className="md:col-span-1">
+            <article class="flex flex-col xl:flex-row items-center xl:items-start justify-between h-full p-6">
+                <Futbol class="w-auto h-full" />
+                <footer class="min-w-48">
+                    <h3 class="text-primary font-bold text-3xl">Fútbol</h3>
+                    <p class="text-primary text-2xl">Rama masculina</p>
+                </footer>
+            </article>
+        </Bento>
+    </div>
+    <div class="flex justify-center">
+        <a href="/deportes" class="mt-16 bg-light text-primary text-2xl border-2 border-primary rounded-xl px-6 py-2 hover:font-bold hover:border-light hover:bg-primary hover:text-white">Ver todos</a>
+    </div>
+</section>
