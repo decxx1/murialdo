@@ -3,8 +3,8 @@ import Menu1 from "@/components/Menu1";
 import Menu2 from "@/components/Menu2";
 export default function Header() {
 
-    const [ scrolled, setScrolled ] = useState(window.scrollY > 209);
-    const [ isMobile, setIsMobile ] = useState(window.innerWidth < 768);
+    const [ scrolled, setScrolled ] = useState(false);
+    const [ isMobile, setIsMobile ] = useState(false);
     const [ showNavMobile, setShowNavMobile ] = useState(false);
     
     useEffect(() => {
