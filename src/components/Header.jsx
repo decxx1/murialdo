@@ -24,6 +24,7 @@ export default function Header() {
         } else {
             setIsMobile(true);
         }
+        handleScroll()
 
         // Attach listeners
         window.addEventListener("scroll", handleScroll);
