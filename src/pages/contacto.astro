@@ -1,0 +1,24 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+
+
+const preloadImages = [
+	{
+		href:"/images/contacto/contacto-hero.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Contacto - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/contacto"
+	metaDescription="Contacta con el club Leonardo Murialdo para cualquier consulta o duda. Envía un correo y nos pondremos en contacto contigo a la brevedad."
+	metaImg="https://clubleonardomurialdo.com.ar/images/contacto/contacto-hero.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Contactá con nosotros" img="/images/contacto/contacto-hero.webp" />
+
+</Layout>

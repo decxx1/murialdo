@@ -80,7 +80,7 @@ export default function Menu2({dropdownId, isMobile}) {
                 </div>
             </li>
             <li>
-                <a href="/nosotros" className={isMobile ? 'hover:bg-light hover:text-primary w-full px-4 py-2 rounded-xl' : ''}>Contacto</a>
+                <a href="/contacto" className={isMobile ? 'hover:bg-light hover:text-primary w-full px-4 py-2 rounded-xl' : ''}>Contacto</a>
             </li>
         </>
     )
