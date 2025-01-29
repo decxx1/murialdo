@@ -76,9 +76,8 @@ export default function Header() {
     }
     return(
         <>
-            <div className={`${scrolled ? "mt-[171px]" : ""}`}></div>
-            <header className={`${scrolled ? "sticky" : ""} container mx-auto top-0 z-50 transition-[margin] duration-300`}>
-                <div className={`${scrolled ? "" : "py-4"} flex justify-between items-center transition-[margin] duration-300`}>
+            <header className={`fixed w-full top-0 z-50 transition-[margin] duration-300`}>
+                <div className={`${scrolled ? "" : "py-4"} container mx-auto flex justify-between items-center transition-[margin] duration-300`}>
                     <nav 
                         className={`${isMobile ? "hidden" : ""} bg-[#14337f] py-6 w-full rounded-3xl`}
                     >
