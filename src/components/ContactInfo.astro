@@ -1,0 +1,49 @@
+---
+
+import Email from "@/assets/icons/contact/email.svg";
+import Map from "@/assets/icons/contact/mapmarker-circle.svg";
+import Phone from "@/assets/icons/contact/phone-circle.svg";
+import Whatsapp from "@/assets/icons/contact/whatsapp-circle.svg";
+
+
+import { 
+    PHONE,
+    PHONE_FORMAT,
+    EMAIL,
+    WHATSAPP,
+    WHATSAPP_FORMAT,
+    ADDRESS,
+    MAP_URL
+ } from "astro:env/client";
+
+---
+<div class="text-center sm:grid sm:grid-cols-2 my-8 md:grid-cols-4 sm:gap-4 md:gap-12">
+    <a href={'https://wa.me/' + WHATSAPP_FORMAT} target="_blank" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" class="my-4 py-6 sm:my-0 bg-light rounded-2xl shadow-md border-2 border-primary group hover:scale-105 transition-all duration-300 hover:border-secondary/15">
+        <div class="flex justify-center items-center mx-auto mb-4">
+            <Whatsapp class="w-12 h-12 text-primary" />
+        </div>
+        <p class="mb-2 text-xl text-primary font-bold">WhatsApp</p>
+        <p class="inline-flex py-2 px-4 text-sm font-medium text-center text-primary group-hover:text-secondary">{WHATSAPP}</p>
+    </a>
+    <a href={'tel:' + PHONE_FORMAT} target="_blank" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" class="my-4 py-6 sm:my-0 bg-light rounded-2xl shadow-md border-2 border-primary group hover:scale-105 transition-all duration-300 hover:border-secondary/15">
+        <div class="flex justify-center items-center mx-auto mb-4">
+            <Phone class="w-12 h-12 text-primary" />
+        </div>
+        <p class="mb-2 text-xl text-primary font-bold">Teléfono</p>
+        <p  class="inline-flex py-2 px-4 text-sm font-medium text-center text-primary group-hover:text-secondary">{PHONE}</p>
+    </a>
+    <a href={'mailto:' + EMAIL} target="_blank" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" class="my-4 py-6 sm:my-0 bg-light rounded-2xl shadow-md border-2 border-primary group hover:scale-105 transition-all duration-300 hover:border-secondary/15">
+        <div class="flex justify-center items-center mx-auto mb-4">
+            <Email class="w-12 h-12 text-primary" />
+        </div>
+        <p class="mb-2 text-xl text-primary font-bold">E-mail</p>
+        <p class="break-all whitespace-normal inline-flex py-2 px-4 text-sm font-medium text-center text-primary group-hover:text-secondary">{EMAIL}</p>
+    </a>
+    <a href={MAP_URL} target="_blank" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" class="my-4 py-6 sm:my-0 bg-light rounded-2xl shadow-md border-2 border-primary group hover:scale-105 transition-all duration-300 hover:border-secondary/15">
+        <div class="flex justify-center items-center mx-auto mb-4">
+            <Map class="w-12 h-12 text-primary" />
+        </div>
+        <p class="mb-2 text-xl text-primary font-bold">Dirección</p>
+        <p class="inline-flex py-2 px-4 text-sm font-medium text-center text-primary group-hover:text-secondary">{ADDRESS}</p>
+    </a>
+</div>

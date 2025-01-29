@@ -1,7 +1,10 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
-
+import ContactInfo from '@/components/ContactInfo.astro';
+import FormContact from '@/components/FormContact.jsx';
+import Map from '@/components/Map.astro';
+import { SITE_KEY } from "astro:env/client";
 
 const preloadImages = [
 	{
@@ -19,6 +22,13 @@ const preloadImages = [
 	metaImg="https://clubleonardomurialdo.com.ar/images/contacto/contacto-hero.webp"
 	preLoad={preloadImages}
 >
-	<Breadcrumb title="Contactá con nosotros" img="/images/contacto/contacto-hero.webp" />
-
+	<Breadcrumb title="Contactá con nosotros" img="/images/contacto/contacto-hero.webp" filter />
+	<div class="py-16 px-4 mx-auto -mt-64 max-w-screen-xl sm:py-20 lg:px-6 ">
+        <FormContact client:load />
+        
+        <ContactInfo />
+    </div>
+	<Map />
 </Layout>
+<!-- recaptcha v3 -->
+<script async src={'https://www.google.com/recaptcha/api.js?render=' + SITE_KEY}></script>

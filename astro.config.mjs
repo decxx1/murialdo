@@ -33,6 +33,9 @@ export default defineConfig({
       SCHEDULES_2: envField.string({ context: "client", access: "public", optional: true }),
       SCHEDULES_3: envField.string({ context: "client", access: "public", optional: true }),
       MAP_CAMPING_IFRAME: envField.string({ context: "client", access: "public", optional: true }),
+      SECRET_KEY: envField.string({ context: "client", access: "public", optional: true }),
+      SITE_KEY: envField.string({ context: "client", access: "public", optional: true }),
+      ENDPOINT: envField.string({ context: "client", access: "public", optional: true }),
     }
   }
 });

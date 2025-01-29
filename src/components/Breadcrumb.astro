@@ -2,13 +2,14 @@
 interface Props {
     title: string;
     img: string;
+    filter?: boolean;
 }
 
-const { title,img } = Astro.props;
+const { title, img, filter } = Astro.props;
 ---
 <section class="container mx-auto mt-[150px] md:mt-[140px] lg:mt-[160px]">
     <div 
-        class="bg-no-repeat bg-cover bg-center h-full w-full rounded-3xl"
+        class={`${filter ? "bg-black/40 bg-blend-multiply" : ""} bg-no-repeat bg-cover bg-center h-full w-full rounded-3xl`}
         style={{ backgroundImage: `url(${img})` }}
     >
         

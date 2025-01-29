@@ -89,5 +89,47 @@
         "class": "wide",
         "width": "1920",
         "height": "910"
+    },
+    {
+        "src": "/images/camping/gallery/14.jpg",
+        "thumb": "/images/camping/gallery/thumb/14.webp",
+        "class": "wide",
+        "width": "1920",
+        "height": "1280"
+    },
+    {
+        "src": "/images/camping/gallery/15.jpg",
+        "thumb": "/images/camping/gallery/thumb/15.webp",
+        "class": "wide",
+        "width": "1920",
+        "height": "1280"
+    },
+    {
+        "src": "/images/camping/gallery/16.jpg",
+        "thumb": "/images/camping/gallery/thumb/16.webp",
+        "class": "",
+        "width": "1920",
+        "height": "1280"
+    },
+    {
+        "src": "/images/camping/gallery/17.jpg",
+        "thumb": "/images/camping/gallery/thumb/17.webp",
+        "class": "tall",
+        "width": "1920",
+        "height": "1280"
+    },
+    {
+        "src": "/images/camping/gallery/18.jpg",
+        "thumb": "/images/camping/gallery/thumb/18.webp",
+        "class": "tall",
+        "width": "1920",
+        "height": "1280"
+    },
+    {
+        "src": "/images/camping/gallery/19.jpg",
+        "thumb": "/images/camping/gallery/thumb/19.webp",
+        "class": "big",
+        "width": "1920",
+        "height": "1280"
     }
 ]
