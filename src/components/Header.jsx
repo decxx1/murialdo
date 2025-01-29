@@ -90,7 +90,7 @@ export default function Header() {
                         <div className={`${isMobile ? "w-10 px-1" : "hidden"} ${scrolled ? "hidden" : ""}`}></div>
                         <a href="/" >
                             <img
-                                src="/images/logo/club-murialdo.png"
+                                src="/images/logo/club-murialdo.webp"
                                 alt="Club Murialdo"
                                 className={`${imgClass()} transition-all duration-300`}
                             />

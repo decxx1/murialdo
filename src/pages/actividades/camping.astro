@@ -8,9 +8,9 @@ import CTACamping from '@/components/camping/CTACamping.astro';
 
 const preloadImages = [
 	{
-		href:"/images/camping/carrizal-hero.jpg",
+		href:"/images/camping/carrizal-hero.webp",
 		as: "image",
-		type: "image/jpg",
+		type: "image/webp",
 	}
 ];
 ---
@@ -20,10 +20,10 @@ const preloadImages = [
 	canonical="https://clubleonardomurialdo.com.ar/camping"
 	metaTitle="Club Leonardo Murialdo - Camping"
 	metaDescription="Camping en el carrizal para disfrutar en familia. Ofrecemos parcelas amplias, actividades para todas las edades y un entorno natural seguro y relajante. Piscina, zonas de  parrillas"
-	metaImg="https://clubleonardomurialdo.com.ar/images/camping/carrizal-hero.jpg"
+	metaImg="https://clubleonardomurialdo.com.ar/images/camping/carrizal-hero.webp"
 	preLoad={preloadImages}
 >
-	<Breadcrumb title="Camping Carrizal" img="/images/camping/carrizal-hero.jpg" />
+	<Breadcrumb title="Camping Carrizal" img="/images/camping/carrizal-hero.webp" />
 	<CTACamping />
 	<CampingInfo />
 	<Map />
