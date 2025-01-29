@@ -40,9 +40,9 @@ export default function Header() {
         if (isMobile && !scrolled){
             return "w-32";
         }else if (isMobile && scrolled){
-            return "w-20 drop-shadow-[0_4px_3px_rgba(255,255,255,0.07)]";
+            return "w-20 drop-shadow-[0px_3px_6px_rgba(0,0,0,0.5)]";
         }else if(!isMobile && scrolled){
-            return "w-40 drop-shadow-[0_4px_3px_rgba(255,255,255,0.07)]";
+            return "w-40 drop-shadow-[0px_3px_6px_rgba(0,0,0,0.5)]";
         }else if(!isMobile && !scrolled){
             return "w-80 lg:w-96";
         }
@@ -90,9 +90,9 @@ export default function Header() {
                         <div className={`${isMobile ? "w-10 px-1" : "hidden"} ${scrolled ? "hidden" : ""}`}></div>
                         <a href="/" >
                             <img
-                                src="/images/logo/club-murialdo.webp"
+                                src="/images/logo/club-leonardo-murialdo.svg"
                                 alt="Club Murialdo"
-                                className={`${imgClass()} transition-all duration-300`}
+                                className={`${imgClass()} hover:scale-105 hover:drop-shadow-[0px_3px_6px_rgba(255,255,255,0.5)] transition-all duration-300`}
                             />
                         </a>
                         <button onClick={() => setShowNavMobile(!showNavMobile)} className={`${isMobile ? "" : "hidden"} text-white hover:text-primary hover:bg-light rounded-xl px-1 py-1`}>
