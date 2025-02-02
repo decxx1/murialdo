@@ -37,25 +37,22 @@ export default function Header() {
     }, []);
     
     const imgClass = () => {
-        if (isMobile && !scrolled){
-            return "w-32";
-        }else if (isMobile && scrolled){
-            return "w-20 drop-shadow-[0px_3px_6px_rgba(0,0,0,0.5)]";
+        if (isMobile && scrolled){
+            return "!w-20 drop-shadow-[0px_3px_6px_rgba(0,0,0,0.5)]";
         }else if(!isMobile && scrolled){
-            return "w-40 drop-shadow-[0px_3px_6px_rgba(0,0,0,0.5)]";
-        }else if(!isMobile && !scrolled){
-            return "w-80 lg:w-96";
+            return "!w-40 drop-shadow-[0px_3px_6px_rgba(0,0,0,0.5)]";
+        }else{
+            return "";
         }
     }
     const divImgClass = () => {
-        if (isMobile && !scrolled){
-            return "bg-header py-10 px-3 mt-8 w-full rounded-3xl h-20 relative flex flex-row items-center justify-between";
-        } else if (isMobile && scrolled){
-            return "bg-header py-10 px-3 mt-4 w-full rounded-3xl h-20 relative flex flex-row items-center justify-between";
+        
+        if (isMobile && scrolled){
+            return "!mt-4";
         }else if(!isMobile && scrolled){
-            return "-mx-12";
-        }else if(!isMobile && !scrolled){
-            return "mx-2 -mb-12 lg:mx-10 xl:mx-20";
+            return "!-mx-12 sm:!mb-0";
+        }else{
+            return "";
         }
     }
 
@@ -79,23 +76,23 @@ export default function Header() {
             <header className={`fixed w-full top-0 z-50 transition-[margin] duration-300`}>
                 <div className={`${scrolled ? "" : "py-4"} container mx-auto flex justify-between items-center transition-[margin] duration-300`}>
                     <nav 
-                        className={`${isMobile ? "hidden" : ""} bg-header py-6 w-full rounded-3xl`}
+                        className="max-sm:hidden bg-[#14337f] py-6 w-full rounded-3xl"
                     >
                         <ul className="flex items-center justify-center gap-4 lg:gap-6 xl:gap-8 text-white text-xl lg:text-2xl xl:text-3xl">
                             <Menu1 dropdownId="1" />
                         </ul>
                     </nav>
                     
-                    <div className={`${divImgClass()} transition-[margin] duration-300 z-[60]`}>
-                        <div className={`${isMobile ? "w-10 px-1" : "hidden"} ${scrolled ? "hidden" : ""}`}></div>
+                    <div className={`${divImgClass()} sm:-mb-12 sm:mx-2 lg:mx-10 xl:mx-20 max-sm:mt-8 max-sm:bg-[#14337f] max-sm:py-10 max-sm:px-3 max-sm:w-full max-sm:h-20 max-sm:rounded-3xl max-sm:relative max-sm:flex max-sm:flex-row max-sm:items-center max-sm:justify-between transition-[margin] duration-300 z-[60]`}>
+                        <div className={`${scrolled ? "hidden" : ""} max-sm:w-10 max-sm:px-1 sm:hidden`}></div>
                         <a href="/" >
                             <img
                                 src="/images/logo/club-leonardo-murialdo.svg"
                                 alt="Club Murialdo"
-                                className={`${imgClass()} hover:scale-105 hover:drop-shadow-[0px_3px_6px_rgba(255,255,255,0.5)] transition-all duration-300`}
+                                className={`${imgClass()} max-sm:w-32 sm:w-80 lg:w-96 hover:scale-105 hover:drop-shadow-[0px_3px_6px_rgba(255,255,255,0.5)] transition-all duration-300`}
                             />
                         </a>
-                        <button onClick={() => setShowNavMobile(!showNavMobile)} className={`${isMobile ? "" : "hidden"} text-white hover:text-primary hover:bg-light rounded-xl px-1 py-1`}>
+                        <button onClick={() => setShowNavMobile(!showNavMobile)} className={`sm:hidden text-white hover:text-primary hover:bg-light rounded-xl px-1 py-1`}>
                             <svg xmlns="http://www.w3.org/2000/svg" className=" w-10" viewBox="0 0 20 20"><path fill="currentColor" fillRule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75m7 10.5a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75M2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10" clipRule="evenodd"/></svg>
                         </button>
                         <div className={`${dropdownNavClass()} bg-header py-6 w-full rounded-3xl absolute left-0`}>
@@ -107,7 +104,7 @@ export default function Header() {
                     </div>
                     
                     <nav
-                        className={`${isMobile ? "hidden" : ""} bg-header py-6 w-full rounded-3xl`}
+                        className="max-sm:hidden bg-[#14337f] py-6 w-full rounded-3xl"
                     >
                         <ul className="flex items-center justify-center gap-4 lg:gap-6 xl:gap-8 text-white text-xl lg:text-2xl xl:text-3xl">
                             <Menu2 dropdownId="1" />
