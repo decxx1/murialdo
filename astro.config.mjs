@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config';
 
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 
 import react from '@astrojs/react';
 
@@ -13,7 +13,10 @@ export default defineConfig({
     // Ejemplo: Genera `page.html` en lugar de `page/index.html` durante la compilación.
     format: 'file'
   },
-  integrations: [tailwind(), react()],
+  vite: {
+    plugins: [tailwindcss()]
+  },
+  integrations: [react()],
   experimental: {
     svg: true,
   },
