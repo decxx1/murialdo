@@ -57,7 +57,7 @@ export default function Header() {
             <header className={`fixed w-full top-0 z-50 transition-[margin] duration-300`}>
                 <div className={`${scrolled ? "" : "py-4"} container mx-auto flex justify-between items-center transition-[margin] duration-300`}>
                     <nav 
-                        className="max-sm:hidden bg-header py-6 w-full rounded-3xl"
+                        className="max-sm:hidden bg-header py-4 w-full rounded-3xl"
                     >
                         <ul className="flex items-center justify-center gap-4 lg:gap-6 xl:gap-8 text-white text-xl lg:text-2xl xl:text-3xl">
                             <Menu1 dropdownId="1" />
@@ -85,7 +85,7 @@ export default function Header() {
                     </div>
                     
                     <nav
-                        className="max-sm:hidden bg-header py-6 w-full rounded-3xl"
+                        className="max-sm:hidden bg-header py-4 w-full rounded-3xl"
                     >
                         <ul className="flex items-center justify-center gap-4 lg:gap-6 xl:gap-8 text-white text-xl lg:text-2xl xl:text-3xl">
                             <Menu2 dropdownId="1" />

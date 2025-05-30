@@ -41,12 +41,23 @@ export default function Menu2({dropdownId}) {
     return (
         <>
             <li>
-                <button id={"dropdownActivitiesButton"+dropdownId} className="max-sm:hover:bg-light max-sm:hover:text-primary max-sm:w-full max-sm:px-4 max-sm:py-2 max-sm:rounded-xl inline-flex items-center cursor-pointer" type="button">
-                    Actividades 
-                    <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-                    </svg>
-                </button>
+                <div className="inline-flex items-center group max-sm:w-full max-sm:rounded-xl">
+                    <a 
+                        href="/actividades" 
+                        className="cursor-pointer max-sm:hover:text-primary sm:hover:bg-primary/70 pl-2 pr-1 py-2 rounded-l-xl max-sm:group-hover:text-primary max-sm:group-hover:bg-light"
+                    >
+                        Actividades
+                    </a>
+                    <button
+                        id={"dropdownActivitiesButton"+dropdownId}
+                        className="inline-flex items-center cursor-pointer sm:hover:bg-primary/70 pl-1 pr-2 py-4 rounded-r-xl max-sm:group-hover:text-primary max-sm:group-hover:bg-light"
+                        type="button"
+                    >
+                        <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                </div>
                 <div id={"dropdownActivities"+dropdownId} className="z-50 hidden bg-primary divide-y divide-light rounded-xl shadow w-52 lg:w-72 xl:w-96">
                     <ul className="py-2 text-lg lg:text-xl xl:text-2xl text-white" >
                         <li>
@@ -80,7 +91,7 @@ export default function Menu2({dropdownId}) {
                 </div>
             </li>
             <li>
-                <a href="/contacto" className="max-sm:hover:bg-light max-sm:hover:text-primary max-sm:w-full max-sm:px-4 max-sm:py-2 max-sm:rounded-xl">Contacto</a>
+                <a href="/contacto" className="max-sm:hover:bg-light max-sm:hover:text-primary max-sm:w-full max-sm:px-4 max-sm:py-2 max-sm:rounded-xl px-2 py-2 rounded-xl sm:hover:bg-primary/70">Contacto</a>
             </li>
         </>
     )
