@@ -1,0 +1,140 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import SportsBento from '@/components/SportsBento.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/actividades-hero.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+
+const actividades = [
+    {
+        title: "Aerobic",
+        description: "Actividad física aeróbica",
+        href: "/actividades/aerobic",
+        imgSrc: "/images/actividades/aerobic.webp",
+        variant: "vertical"
+    },
+    {
+        title: "Nuestras Actividades",
+        href: "/actividades",
+        variant: "none"
+    },
+    {
+        title: "Escuela de verano",
+        description: "Actividades recreativas en verano",
+        href: "https://escueladeveranomurialdo.com.ar/",
+        imgSrc: "/images/actividades/escuela-verano.webp",
+        variant: "vertical"
+    },
+    
+    {
+        title: "Camping",
+        description: "Actividades al aire libre",
+        href: "/actividades/camping",
+        imgSrc: "/images/actividades/camping.webp",
+        variant: "big"
+    },
+    {
+        title: "Aerobox",
+        description: "Combinación de aeróbicos y boxeo",
+        href: "/actividades/aerobox",
+        imgSrc: "/images/actividades/aerobox.webp",
+        variant: "default"
+    },
+    
+    {
+        title: "Paddle",
+        description: "Deporte de raqueta",
+        href: "/actividades/paddle",
+        imgSrc: "/images/actividades/paddle.webp",
+        variant: "default"
+    },
+    {
+        title: "Full body",
+        description: "Entrenamiento de cuerpo completo",
+        href: "/actividades/full-body",
+        imgSrc: "/images/actividades/full-body.webp",
+        variant: "wide"
+    },
+    {
+        title: "Pilates",
+        description: "Sistema de entrenamiento físico y mental",
+        href: "/actividades/pilates",
+        imgSrc: "/images/actividades/pilates.webp",
+        variant: "wide"
+    },
+    {
+        title: "Yoga",
+        description: "Disciplina física y mental",
+        href: "/actividades/yoga",
+        imgSrc: "/images/actividades/yoga.webp",
+        variant: "wide"
+    },
+    {
+        title: "Zumba",
+        description: "Ejercicio aeróbico con ritmos latinos",
+        href: "/actividades/zumba",
+        imgSrc: "/images/actividades/zumba.webp",
+        variant: "wide"
+    },
+];
+---
+
+<Layout
+	title="Actividades - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades"
+	metaDescription="Conoce todas las actividades que ofrece el Club Leonardo Murialdo. Aerobic, aerobox, camping, pilates, yoga y más."
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/actividades-hero.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Nuestras Actividades" img="/images/actividades/actividades-hero.webp" filter />
+	
+    <section class="py-16 px-4 mx-auto max-w-screen-xl sm:py-20 lg:px-6">
+        <h2 class="text-white font-bold text-3xl text-center">Actividades recreativas y de bienestar</h2>
+        <p class="text-white text-xl text-center">Para todas las edades</p>
+    </section>
+    <section class="py-16 px-4 mx-auto max-w-screen-xl sm:py-20 lg:px-6 relative">
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
+            <img 
+                src="/images/logo/club-leonardo-murialdo.svg" 
+                alt="Logo Club Leonardo Murialdo" 
+                class="w-4/5 max-w-3xl opacity-5 select-none drop-shadow"
+            />
+        </div>
+        <div class="grid auto-rows-[256px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-sm:mx-4">
+            {actividades.map((actividad, index) => {
+                // Aplicar orden especial para el primer y segundo elemento
+                let orderClass = "";
+                if (index === 0) {
+                    // Primer elemento: orden normal en pantallas grandes, segundo en pequeñas
+                    orderClass = "order-2 sm:order-1";
+                } else if (index === 1) {
+                    // Segundo elemento: primer orden en pantallas pequeñas, segundo en grandes
+                    orderClass = "order-1 sm:order-2";
+                } else {
+                    orderClass = "order-3";
+                }
+                
+                return (
+                    <SportsBento 
+                        title={actividad.title}
+                        href={actividad.href}
+                        imgSrc={actividad.imgSrc}
+                        variant={actividad.variant}
+                        className={orderClass}
+                    />
+                );
+            })}
+        </div>
+    </section>
+</Layout>
+<style>
+    .drop-shadow {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)) blur(8px);
+    }
+</style>

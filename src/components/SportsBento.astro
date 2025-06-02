@@ -30,7 +30,7 @@ switch (variant) {
 }
 
 // Determine if this is a wide variant for layout purposes
-const isWideVariant = variant === 'wide' || variant === 'big';
+const isWideVariant = variant === 'wide';
 ---
 
 <a 
@@ -88,6 +88,29 @@ const isWideVariant = variant === 'wide' || variant === 'big';
             <article class="flex justify-center items-center h-full w-full">
                 <div class="text-center">
                     <h3 class="text-white font-bold text-5xl sm:text-4xl md:text-6xl">{title}</h3>
+                </div>
+            </article>
+        ) :  variant === 'big' ? (
+            <article class="flex flex-col justify-between items-center h-full">
+                <div class="z-20">
+                    <h3 class="text-white font-bold text-3xl sm:text-2xl md:text-3xl">{title}</h3>
+                    {description && <p class="text-white text-lg md:text-xl">{description}</p>}
+                </div>
+                <div class="flex-1 flex items-center justify-center">
+                    <div class="rounded-2xl z-10 overflow-hidden w-full h-auto shadow shadow-primary rotate-4">
+                        <img 
+                            src={imgSrc} 
+                            alt={title} 
+                            class="h-full w-full object-cover"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="absolute rounded-2xl w-full h-auto -rotate-4">
+                        <img src={imgSrc}  alt={title} 
+                            class="h-full w-full object-cover blur-xl -z-20 transition"
+                            loading="lazy"
+                        >
+                    </div>
                 </div>
             </article>
         ) : (
