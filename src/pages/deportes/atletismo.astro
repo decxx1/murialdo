@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import AtletismoHorarios from '@/components/deportes/atletismo/AtletismoHorarios.astro';
+import CTAAtletismo from '@/components/deportes/atletismo/CTAAtletismo.astro';
+
+const preloadImages = [
+	{
+		href:"/images/deportes/atletismo.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Atletismo - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/deportes/atletismo"
+	metaDescription="Atletismo en Club Leonardo Murialdo. Entrenamiento para todas las edades en nuestra pista de atletismo. Categorías desde U8 hasta Master."
+	metaImg="https://clubleonardomurialdo.com.ar/images/deportes/atletismo.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Atletismo" img="/images/deportes/atletismo.webp" />
+	<CTAAtletismo />
+	<AtletismoHorarios />
+</Layout>
