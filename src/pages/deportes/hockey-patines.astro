@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import Gallery from '@/components/Gallery.astro';
+import HockeyPatinesInfo from '@/components/deportes/hockey-patines/HockeyPatinesInfo.astro';
+import HockeyPatinesHorarios from '@/components/deportes/hockey-patines/HockeyPatinesHorarios.astro';
+import CTAHockeyPatines from '@/components/deportes/hockey-patines/CTAHockeyPatines.astro';
+
+const preloadImages = [
+	{
+		href:"/images/deportes/hockey-patines.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Hockey sobre Patines - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/deportes/hockey-patines"
+	metaDescription="Hockey sobre patines en Club Leonardo Murialdo. Equilibrio, destreza y diversión para niños desde los 4 años. Escuelita para principiantes y equipos competitivos."
+	metaImg="https://clubleonardomurialdo.com.ar/images/deportes/hockey-patines.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Hockey sobre Patines" img="/images/deportes/hockey-patines.webp" />
+	<CTAHockeyPatines />
+	<HockeyPatinesInfo />
+	<HockeyPatinesHorarios />
+</Layout>

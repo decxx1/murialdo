@@ -1,0 +1,78 @@
+---
+import Trophy from "@/assets/icons/trophy.svg";
+---
+<section class="container mx-auto py-20">
+    <h2 class="text-center font-bold text-4xl mb-4 text-white">Logros Destacados</h2>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-6 bg-light text-primary border-2 border-primary rounded-3xl px-4 py-4">
+            <h3 class="font-semibold text-xl mb-2 flex items-center">
+                <Trophy class="w-5 h-5 mr-2 text-yellow-500" /> Damas
+            </h3>
+            <ul class="text-sm space-y-1 flex flex-col-reverse">
+                <li>⭐ Apertura 2017</li>
+                <li>⭐ Clausura 2017</li>
+                <li>⭐ Copa de Honor 2017</li>
+                <li>⭐ Apertura 2019</li>
+                <li>⭐ Clausura 2019</li>
+                <li>⭐ Mendocino 2021</li>
+                <li>⭐ Clausura 2021</li>
+                <li>⭐ Apertura 2022</li>
+                <li>⭐ Copa de Honor 2022</li>
+                <li>⭐ Superliga Fase 1 - Mendoza 2023</li>
+                <li>⭐ Apertura 2023</li>
+                <li>⭐ Clausura 2023</li>
+            </ul>
+        </div>
+        <div class="md:col-span-6 bg-light text-primary border-2 border-primary rounded-3xl px-4 py-4">
+            <h3 class="font-semibold text-xl mb-2 flex items-center">
+                <Trophy class="w-5 h-5 mr-2 text-yellow-500" /> Caballeros
+            </h3>
+            <ul class="text-sm space-y-1 flex flex-col-reverse">
+                <li id="button" class="cursor-pointer hover:underline ms-6">Ver más</li>
+                <div id="more" class="hidden">
+                    <li>⭐ Campeonato 1988</li>
+                    <li>⭐ Campeonato 1989</li>
+                    <li>⭐ Regional - San Rafael 1992</li>
+                    <li>⭐ Campeonato 1992</li>
+                    <li>⭐ Apertura 1993</li>
+                    <li>⭐ Regional - Rosario 1995</li>
+                    <li>⭐ Clausura 1996</li>
+                    <li>⭐ Apertura 1998</li>
+                    <li>⭐ Liga Nacional 'B' - Mar del Plata 1999</li>
+                    <li>⭐ Clausura 1999</li>
+                    <li>⭐ Apertura 2000</li>
+                    <li>⭐ Liga Nacional 'B' - Mendoza 2004</li>
+                    <li>⭐ Apertura 2005</li>
+                </div>
+                <li>⭐ Clausura 2008</li>
+                <li>⭐ Clausura 2009.</li>
+                <li>⭐ C.A.C. 'A2' - Bahía Blanca 2010</li>
+                <li>⭐ Apertura 2010</li>
+                <li>⭐ Mendocino 2012</li>
+                <li>⭐ LNH 'B' Centro-Cuyo -  San Juan 2012</li>
+                <li>⭐ Apertura 2013</li>
+                <li>⭐ LNH 'B' Centro-Cuyo - San Juan 2013</li>
+                <li>⭐ CRC 'A' Centro-Cuyo - Mendoza 2016</li>
+                <li>⭐ Apertura 2022</li>
+                <li>⭐ Copa de Honor 2022</li>
+                <li>⭐ Apertura 2023</li>
+                
+            </ul>
+        </div>
+    </div>
+</section>
+<script>
+    const more = document.getElementById("more");
+    const button = document.getElementById("button");
+    if (button && more) {
+        button.addEventListener("click", () => {
+            if (more.style.display === "none") {
+                more.style.display = "block";
+                button.textContent = "Ver menos";
+            } else {
+                more.style.display = "none";
+                button.textContent = "Ver más";
+            }
+        });
+    }
+</script>

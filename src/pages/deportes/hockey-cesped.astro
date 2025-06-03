@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import HockeyCespedInfo from '@/components/deportes/hockey-cesped/HockeyCespedInfo.astro';
+import HockeyCespedHorarios from '@/components/deportes/hockey-cesped/HockeyCespedHorarios.astro';
+import CTAHockeyCesped from '@/components/deportes/hockey-cesped/CTAHockeyCesped.astro';
+import Achievements from '@/components/deportes/hockey-cesped/Achievements.astro';
+
+const preloadImages = [
+	{
+		href:"/images/deportes/hockey-cesped.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Hockey sobre Césped - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/deportes/hockey-cesped"
+	metaDescription="Hockey sobre césped en Club Leonardo Murialdo. Más de 50 años de trayectoria formando deportistas y campeones. Equipos femeninos, masculinos y mamys hockey."
+	metaImg="https://clubleonardomurialdo.com.ar/images/deportes/hockey-cesped.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Hockey sobre Césped" img="/images/deportes/hockey-cesped.webp" />
+	<CTAHockeyCesped />
+	<HockeyCespedInfo />
+	<Achievements />
+	<HockeyCespedHorarios />
+</Layout>

@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import Gallery from '@/components/Gallery.astro';
+import FutsalInfo from '@/components/deportes/futsal/FutsalInfo.astro';
+import FutsalHorarios from '@/components/deportes/futsal/FutsalHorarios.astro';
+import CTAFutsal from '@/components/deportes/futsal/CTAFutsal.astro';
+
+const preloadImages = [
+	{
+		href:"/images/deportes/futsal.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Futsal - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/deportes/futsal"
+	metaDescription="Futsal en Club Leonardo Murialdo. Velocidad, técnica y pasión en un ambiente competitivo y formativo. Equipos federados en torneos FE.FU.SA."
+	metaImg="https://clubleonardomurialdo.com.ar/images/deportes/futsal.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Futsal" img="/images/deportes/futsal.webp" />
+	<CTAFutsal />
+	<FutsalInfo />
+	<FutsalHorarios />
+</Layout>

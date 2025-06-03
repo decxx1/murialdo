@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import Gallery from '@/components/Gallery.astro';
+import BasquetInfo from '@/components/deportes/basquet/BasquetInfo.astro';
+import BasquetHorarios from '@/components/deportes/basquet/BasquetHorarios.astro';
+import CTABasquet from '@/components/deportes/basquet/CTABasquet.astro';
+
+const preloadImages = [
+	{
+		href:"/images/deportes/basquet.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Básquet - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/deportes/basquet"
+	metaDescription="Básquet en Club Leonardo Murialdo. Formamos jugadores y personas con valores, trabajo en equipo y superación personal. Categorías desde iniciación hasta primera división."
+	metaImg="https://clubleonardomurialdo.com.ar/images/deportes/basquet.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Básquet" img="/images/deportes/basquet.webp" />
+	<CTABasquet />
+	<BasquetInfo />
+	<BasquetHorarios />
+</Layout>
