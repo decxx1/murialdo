@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import FutbolInfo from '@/components/deportes/futbol/FutbolInfo.astro';
+import FutbolHorarios from '@/components/deportes/futbol/FutbolHorarios.astro';
+import CTAFutbol from '@/components/deportes/futbol/CTAFutbol.astro';
+
+const preloadImages = [
+	{
+		href:"/images/deportes/futbol.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Fútbol - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/deportes/futbol"
+	metaDescription="Fútbol en Club Leonardo Murialdo. Formación integral para todas las edades con un enfoque en valores, técnica y trabajo en equipo. Categorías masculinas y femeninas."
+	metaImg="https://clubleonardomurialdo.com.ar/images/deportes/futbol.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Fútbol" img="/images/deportes/futbol.webp" />
+	<CTAFutbol />
+	<FutbolInfo />
+	<FutbolHorarios />
+</Layout>
