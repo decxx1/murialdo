@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import VoleyInfo from '@/components/deportes/voley/VoleyInfo.astro';
+import VoleyHorarios from '@/components/deportes/voley/VoleyHorarios.astro';
+import CTAVoley from '@/components/deportes/voley/CTAVoley.astro';
+
+const preloadImages = [
+	{
+		href:"/images/deportes/voley.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Voley - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/deportes/voley"
+	metaDescription="Voley en Club Leonardo Murialdo. Formación integral para todas las edades y categorías. Desarrollá habilidades técnicas y valores de equipo en un ambiente competitivo y formativo."
+	metaImg="https://clubleonardomurialdo.com.ar/images/deportes/voley.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Voley" img="/images/deportes/voley.webp" />
+	<CTAVoley />
+	<VoleyInfo />
+	<VoleyHorarios />
+</Layout>
