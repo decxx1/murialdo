@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import PatinajeInfo from '@/components/deportes/patinaje-artistico/PatinajeInfo.astro';
+import PatinajeHorarios from '@/components/deportes/patinaje-artistico/PatinajeHorarios.astro';
+import CTAPatinaje from '@/components/deportes/patinaje-artistico/CTAPatinaje.astro';
+
+const preloadImages = [
+	{
+		href:"/images/deportes/patinaje-artistico.webp", // Asegúrate que esta imagen exista o reemplázala
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Patinaje Artístico - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/deportes/patinaje-artistico"
+	metaDescription="Descubrí el Patinaje Artístico en Club Leonardo Murialdo. Clases para todas las edades, desde iniciación hasta competencia. ¡Sumate a nuestro equipo!"
+	metaImg="https://clubleonardomurialdo.com.ar/images/deportes/patinaje-artistico.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Patinaje Artístico" img="/images/deportes/patinaje-artistico.webp" />
+	<CTAPatinaje />
+	<PatinajeInfo />
+	<PatinajeHorarios />
+</Layout>

@@ -79,7 +79,7 @@ export default function Menu1({dropdownId}) {
                         <a href="/deportes/hockey-cesped" className="block px-4 py-2 lg:py-4 hover:bg-light hover:rounded-2xl hover:text-primary">Hockey sobre césped</a>
                     </li>
                     <li>
-                        <a href="/deportes/patinaje" className="block px-4 py-2 lg:py-4 hover:bg-light hover:rounded-2xl hover:text-primary">Patinaje artístico</a>
+                        <a href="/deportes/patinaje-artistico" className="block px-4 py-2 lg:py-4 hover:bg-light hover:rounded-2xl hover:text-primary">Patinaje artístico</a>
                     </li>
                     <li>
                         <a href="/deportes/tenis" className="block px-4 py-2 lg:py-4 hover:bg-light hover:rounded-2xl hover:text-primary">Tenis</a>
