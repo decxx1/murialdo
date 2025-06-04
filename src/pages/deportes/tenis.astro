@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import TenisInfo from '@/components/deportes/tenis/TenisInfo.astro';
+import TenisHorarios from '@/components/deportes/tenis/TenisHorarios.astro';
+import CTATenis from '@/components/deportes/tenis/CTATenis.astro';
+
+const preloadImages = [
+	{
+		href:"/images/deportes/tenis.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Tenis - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/deportes/tenis"
+	metaDescription="Tenis en Club Leonardo Murialdo. Clases para todas las edades y niveles. Desarrollá tu técnica y disfrutá de este deporte completo en nuestras instalaciones."
+	metaImg="https://clubleonardomurialdo.com.ar/images/deportes/tenis.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Tenis" img="/images/deportes/tenis.webp" />
+	<CTATenis />
+	<TenisInfo />
+	<TenisHorarios />
+</Layout>
