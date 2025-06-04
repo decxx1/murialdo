@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
+import CTAAerobic from '@/components/actividades/aerobic/CTAAerobic.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/aerobic.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Aerobic - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades/aerobic"
+	metaDescription="Aerobic en Club Leonardo Murialdo. Actividad física aeróbica para mejorar tu condición física y bienestar."
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/aerobic.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Aerobic" img="/images/actividades/aerobic.webp" />
+	<CTAAerobic />
+	<ActividadesHorarios filtroActividad="aerobic" />
+</Layout>

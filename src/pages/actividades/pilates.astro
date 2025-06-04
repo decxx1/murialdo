@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
+import CTAPilates from '@/components/actividades/pilates/CTAPilates.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/pilates.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Pilates - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades/pilates"
+	metaDescription="Pilates en Club Leonardo Murialdo. Sistema de entrenamiento físico y mental para mejorar tu fuerza, flexibilidad y postura."
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/pilates.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Pilates" img="/images/actividades/pilates.webp" />
+	<CTAPilates />
+	<ActividadesHorarios filtroActividad="pilates" />
+</Layout>

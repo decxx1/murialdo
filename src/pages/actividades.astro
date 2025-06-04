@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import SportsBento from '@/components/SportsBento.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
 
 const preloadImages = [
 	{
@@ -132,6 +133,8 @@ const actividades = [
             })}
         </div>
     </section>
+    
+    <ActividadesHorarios />
 </Layout>
 <style>
     .drop-shadow {

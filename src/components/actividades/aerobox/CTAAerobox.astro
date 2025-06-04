@@ -1,0 +1,19 @@
+---
+import { WHATSAPP_FORMAT } from 'astro:env/client';
+---
+
+<section class="container mx-auto py-16">
+    <div class="bg-primary text-white rounded-3xl px-6 py-8 text-center">
+        <h2 class="font-bold text-3xl mb-4">¡Aerobox en Murialdo!</h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+            ¡Sumate a nuestras clases de Aerobox y combiná aeróbicos con boxeo!
+        </p>
+        <a 
+            href={`https://wa.me/${WHATSAPP_FORMAT}?text=Hola,%20quiero%20información%20sobre%20Aerobox`}
+            class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-light hover:scale-105 transition-all"
+            target="_blank"
+        >
+            ¡Consultá por inscripciones!
+        </a>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
+import CTAAerobox from '@/components/actividades/aerobox/CTAAerobox.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/aerobox.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Aerobox - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades/aerobox"
+	metaDescription="Aerobox en Club Leonardo Murialdo. Combinación de aeróbicos y boxeo para un entrenamiento completo."
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/aerobox.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Aerobox" img="/images/actividades/aerobox.webp" />
+	<CTAAerobox />
+	<ActividadesHorarios filtroActividad="aerobox" />
+</Layout>

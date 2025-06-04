@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
+import CTAZumba from '@/components/actividades/zumba/CTAZumba.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/zumba.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Zumba - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades/zumba"
+	metaDescription="Zumba en Club Leonardo Murialdo. Ejercicio aeróbico con ritmos latinos. Divertite mientras te ejercitás."
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/zumba.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Zumba" img="/images/actividades/zumba.webp" />
+	<CTAZumba />
+	<ActividadesHorarios filtroActividad="zumba" />
+</Layout>

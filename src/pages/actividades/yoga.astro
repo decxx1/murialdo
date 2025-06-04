@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
+import CTAYoga from '@/components/actividades/yoga/CTAYoga.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/yoga.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Yoga - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades/yoga"
+	metaDescription="Yoga en Club Leonardo Murialdo. Disciplina física y mental para mejorar tu bienestar integral."
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/yoga.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Yoga" img="/images/actividades/yoga.webp" />
+	<CTAYoga />
+	<ActividadesHorarios filtroActividad="yoga" />
+</Layout>

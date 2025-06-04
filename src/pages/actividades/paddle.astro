@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
+import CTAPaddle from '@/components/actividades/paddle/CTAPaddle.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/paddle.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Paddle - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades/paddle"
+	metaDescription="Paddle en Club Leonardo Murialdo. Deporte de raqueta dinámico y divertido para todas las edades."
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/paddle.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Paddle" img="/images/actividades/paddle.webp" />
+	<CTAPaddle />
+	<ActividadesHorarios filtroActividad="paddle" />
+</Layout>

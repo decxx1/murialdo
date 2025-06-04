@@ -1,0 +1,138 @@
+---
+// Componente reutilizable para mostrar horarios de actividades
+// Recibe un parámetro opcional "filtroActividad" para mostrar solo una actividad específica
+
+export interface Props {
+  filtroActividad?: string;
+}
+
+const { filtroActividad } = Astro.props;
+
+// Datos de todas las actividades
+const actividades = [
+  {
+    nombre: "ZUMBA",
+    horarios: [
+      { dia: "LUNES", hora: "19:00–20:00" },
+      { dia: "MIÉRCOLES", hora: "19:00–20:00" }
+    ],
+    espacio: "SEDE"
+  },
+  {
+    nombre: "AEROBIC",
+    horarios: [
+      { dia: "MARTES", hora: "17:00–18:00" },
+      { dia: "MIÉRCOLES", hora: "17:00–18:00" },
+      { dia: "JUEVES", hora: "17:00–18:00" },
+      { dia: "VIERNES", hora: "17:00–18:00" }
+    ],
+    espacio: "SEDE"
+  },
+  {
+    nombre: "AEROBOX",
+    horarios: [
+      { dia: "MARTES", hora: "20:15–21:15" },
+      { dia: "JUEVES", hora: "20:15–21:15" }
+    ],
+    espacio: "SEDE"
+  },
+  {
+    nombre: "FULL BODY",
+    horarios: [
+      { dia: "MARTES", hora: "19:15–20:15" },
+      { dia: "JUEVES", hora: "19:15–20:15" }
+    ],
+    espacio: "SEDE"
+  },
+  {
+    nombre: "YOGA",
+    horarios: [
+      { dia: "LUNES", hora: "19:00–20:00" },
+      { dia: "MIÉRCOLES", hora: "19:00–20:00" },
+      { dia: "VIERNES", hora: "19:00–20:00" }
+    ],
+    espacio: "SEDE"
+  },
+  {
+    nombre: "PILATES",
+    horarios: [
+      { dia: "LUNES", hora: "09:30–10:30" },
+      { dia: "MIÉRCOLES", hora: "09:30–10:30" },
+      { dia: "VIERNES", hora: "09:30–10:30" }
+    ],
+    espacio: "SEDE"
+  },
+  {
+    nombre: "PADDLE",
+    horarios: [
+      { dia: "LUNES", hora: "19:00–21:00" },
+      { dia: "MIÉRCOLES", hora: "19:00–21:00" },
+      { dia: "VIERNES", hora: "19:00–21:00" }
+    ],
+    espacio: "SEDE"
+  }
+];
+
+// Filtrar actividades si se especifica un filtro
+const actividadesFiltradas = filtroActividad 
+  ? actividades.filter(act => act.nombre.toLowerCase() === filtroActividad.toLowerCase())
+  : actividades;
+---
+
+<section class="container mx-auto py-16">
+  <h2 class="text-center font-bold text-4xl text-white mb-8">Horarios de Actividades</h2>
+  <div class="bg-light text-primary border-2 border-primary rounded-3xl px-6 py-8">
+    {actividadesFiltradas.map((actividad) => (
+      <div class="mb-10 last:mb-0">
+        <h3 class="font-bold text-2xl mb-4 text-primary text-center bg-primary/10 py-2">{actividad.nombre}</h3>
+        <p class="text-left text-lg italic mb-4">
+          <span class="font-bold bg-primary px-2 text-white rounded-lg">
+            Espacio:
+          </span> {actividad.espacio}: Bandera de los Andes 4420
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-primary text-white">
+                <th class="border border-gray-300 px-4 py-2">LUNES</th>
+                <th class="border border-gray-300 px-4 py-2">MARTES</th>
+                <th class="border border-gray-300 px-4 py-2">MIÉRCOLES</th>
+                <th class="border border-gray-300 px-4 py-2">JUEVES</th>
+                <th class="border border-gray-300 px-4 py-2">VIERNES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">
+                  {actividad.horarios.filter(h => h.dia === "LUNES").map(h => (
+                    <div>{h.hora}</div>
+                  ))}
+                </td>
+                <td class="border border-gray-300 px-4 py-2">
+                  {actividad.horarios.filter(h => h.dia === "MARTES").map(h => (
+                    <div>{h.hora}</div>
+                  ))}
+                </td>
+                <td class="border border-gray-300 px-4 py-2">
+                  {actividad.horarios.filter(h => h.dia === "MIÉRCOLES").map(h => (
+                    <div>{h.hora}</div>
+                  ))}
+                </td>
+                <td class="border border-gray-300 px-4 py-2">
+                  {actividad.horarios.filter(h => h.dia === "JUEVES").map(h => (
+                    <div>{h.hora}</div>
+                  ))}
+                </td>
+                <td class="border border-gray-300 px-4 py-2">
+                  {actividad.horarios.filter(h => h.dia === "VIERNES").map(h => (
+                    <div>{h.hora}</div>
+                  ))}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

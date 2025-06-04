@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
+import CTAFullBody from '@/components/actividades/full-body/CTAFullBody.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/full-body.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Full Body - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades/full-body"
+	metaDescription="Full Body en Club Leonardo Murialdo. Entrenamiento completo para trabajar todos los músculos del cuerpo."
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/full-body.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Full Body" img="/images/actividades/full-body.webp" />
+	<CTAFullBody />
+	<ActividadesHorarios filtroActividad="full body" />
+</Layout>
