@@ -3,8 +3,8 @@
 import "@/styles/global.css";
 import '@fontsource-variable/inter';
 import Footer from '@/components/Footer.astro';
-import WhatsApp from '@/components/WhatsApp.astro';
 import Header from '@/components/Header.jsx';
+import FloatingButton from '@/components/FloatingButton.astro';
 
 import type { Preload } from "@/types/Preload"
 
@@ -75,8 +75,8 @@ const {
 		<main>
 			<slot />
 		</main>
-		<WhatsApp />
 		<Footer />
+		<FloatingButton />
 	</body>
 </html>
 
