@@ -82,6 +82,9 @@ export default function Menu2({dropdownId}) {
                             <a href="/actividades/pilates" className="block px-4 py-2 lg:py-4 hover:bg-light hover:rounded-2xl hover:text-primary">Pilates</a>
                         </li>
                         <li>
+                            <a href="/actividades/stretching" className="block px-4 py-2 lg:py-4 hover:bg-light hover:rounded-2xl hover:text-primary">Stretching</a>
+                        </li>
+                        <li>
                             <a href="/actividades/yoga" className="block px-4 py-2 lg:py-4 hover:bg-light hover:rounded-2xl hover:text-primary">Yoga</a>
                         </li>
                         <li>

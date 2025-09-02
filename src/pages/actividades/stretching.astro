@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
+import CTAStretching from '@/components/actividades/stretching/CTAStretching.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/stretching.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Stretching - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades/stretching"
+	metaDescription="Stretching - Estiramiento. Práctica que consiste en elongar músculos, tendones y ligamentos para mejorar la flexibilidad, la movilidad y la amplitud de los rangos articulares"
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/stretching.png"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Stretching" img="/images/actividades/stretching.png" />
+	<CTAStretching />
+	<ActividadesHorarios filtroActividad="stretching" />
+</Layout>
