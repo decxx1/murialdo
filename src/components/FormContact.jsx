@@ -78,7 +78,7 @@ export default function FormContact() {
                 onSubmit={handleSubmit}
                 method="post"
                 id="contactForm"
-                className="relative z-30 grid grid-cols-1 gap-8 p-6 mx-auto mb-16 max-w-screen-md bg-light border border-primary shadow-sm lg:mb-28 sm:grid-cols-2 rounded-3xl"
+                className="relative z-30 grid grid-cols-1 gap-8 p-6 mx-auto mb-16 max-w-(--breakpoint-md) bg-light border border-primary shadow-sm lg:mb-28 sm:grid-cols-2 rounded-3xl"
             >
                 <Toaster
                     richColors position="top-right" 

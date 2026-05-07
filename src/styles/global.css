@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
+@source "../components/**/*.{js,jsx,astro}";
+
 @theme {
     --font-inter: "Inter Variable", sans-serif;
     --color-mint-500: oklch(0.72 0.11 178);
-    --color-primary:#04246e;
+    --color-primary: #04246e;
     --color-secondary: #ffcf1b;
     --color-tertiary: #e81d20;
     --color-light: #fafafa;

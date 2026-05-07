@@ -38,7 +38,7 @@ export default function Header() {
     
     const imgClass = () => {
         if (scrolled){
-            return "max-sm:!w-20 sm:!w-40 drop-shadow-[0px_3px_6px_rgba(0,0,0,0.5)]";
+            return "max-sm:w-20! sm:w-40! drop-shadow-[0px_3px_6px_rgba(0,0,0,0.5)]";
         }else{
             return "";
         }
@@ -46,7 +46,7 @@ export default function Header() {
     const divImgClass = () => {
         
         if (scrolled){
-            return "max-sm:!mt-4 sm:!-mx-12 sm:!mb-0";
+            return "max-sm:mt-4! sm:-mx-12! sm:mb-0!";
         }else{
             return "";
         }
@@ -64,13 +64,13 @@ export default function Header() {
                         </ul>
                     </nav>
                     
-                    <div className={`${divImgClass()} sm:-mb-12 sm:mx-2 lg:mx-10 xl:mx-20 max-sm:mt-8 max-sm:bg-header max-sm:py-10 max-sm:px-3 max-sm:w-full max-sm:h-20 max-sm:rounded-3xl max-sm:relative max-sm:flex max-sm:flex-row max-sm:items-center max-sm:justify-between transition-[margin] duration-300 z-[60]`}>
+                    <div className={`${divImgClass()} sm:-mb-12 sm:mx-2 lg:mx-10 xl:mx-20 max-sm:mt-8 max-sm:bg-header max-sm:py-10 max-sm:px-3 max-sm:w-full max-sm:h-20 max-sm:rounded-3xl max-sm:relative max-sm:flex max-sm:flex-row max-sm:items-center max-sm:justify-between transition-[margin] duration-300 z-60`}>
                         <div className={`${scrolled ? "hidden" : ""} max-sm:w-10 max-sm:px-1 sm:hidden`}></div>
                         <a href="/" >
                             <img
                                 src="/images/logo/club-leonardo-murialdo.svg"
                                 alt="Club Murialdo"
-                                className={`${imgClass()} relative z-[60] max-sm:w-32 sm:w-80 lg:w-96 hover:scale-105 hover:drop-shadow-[0px_3px_6px_rgba(255,255,255,0.5)] transition-all duration-300`}
+                                className={`${imgClass()} relative z-60 max-sm:w-32 sm:w-80 lg:w-96 hover:scale-105 hover:drop-shadow-[0px_3px_6px_rgba(255,255,255,0.5)] transition-all duration-300`}
                             />
                         </a>
                         <button onClick={() => setShowNavMobile(!showNavMobile)} className="sm:hidden text-white hover:text-primary hover:bg-light rounded-xl px-1 py-1 cursor-pointer">
