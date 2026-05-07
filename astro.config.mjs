@@ -8,7 +8,7 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://clubleonardomurialdo.com.ar/',
+  site: 'https://clubleonardomurialdo.com.ar',
   build: {
     // Ejemplo: Genera `page.html` en lugar de `page/index.html` durante la compilación.
     format: 'file'
@@ -17,9 +17,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   integrations: [react()],
-  experimental: {
-    svg: true,
-  },
   env: {
     schema: {
       INSTAGRAM: envField.string({ context: "client", access: "public", optional: true }),
