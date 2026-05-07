@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ActividadesHorarios from '@/components/actividades/ActividadesHorarios.astro';
+import CTAHipopresivos from '@/components/actividades/hipopresivos/CTAHipopresivos.astro';
+
+const preloadImages = [
+	{
+		href:"/images/actividades/hipopresivos.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Ejercicios Hipopresivos - Club Leonardo Murialdo"
+	canonical="https://clubleonardomurialdo.com.ar/actividades/hipopresivos"
+	metaDescription="Ejercicios Hipopresivos en Club Leonardo Murialdo. Mejorá tu postura, fortalecé tu faja abdominal y recuperá tu bienestar."
+	metaImg="https://clubleonardomurialdo.com.ar/images/actividades/hipopresivos.webp"
+	preLoad={preloadImages}
+>
+	<Breadcrumb title="Ejercicios Hipopresivos" img="/images/actividades/hipopresivos.webp" />
+	<CTAHipopresivos />
+	<ActividadesHorarios filtroActividad="hipopresivos" />
+</Layout>
